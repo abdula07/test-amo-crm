@@ -1,3 +1,4 @@
 vendor/
 application/config/web.json
 .idea/
+/composer.lock

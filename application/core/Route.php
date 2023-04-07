@@ -27,10 +27,14 @@ class Route
         if (!empty($routes[2])) {
             $action_name = $routes[2];
         }
-
+        $controller_path = "application/controllers/Controller".$controller_name. ".php";
         $controller_name = '\application\controllers\Controller' . $controller_name;
         $action_name = 'action_' . $action_name;
 
+        if(!file_exists($controller_path))
+        {
+            Route::ErrorPage404();
+        }
         // создаем контроллер
         $controller = new $controller_name;
         $action = $action_name;
