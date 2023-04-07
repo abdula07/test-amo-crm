@@ -1,0 +1,10 @@
+{
+    "name": "aziz/test",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "application\\": "application/"
+        }
+    },
+    "require": {}
+}
